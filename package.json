@@ -1,0 +1,19 @@
+{
+  "name": "forkify-clone",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pankaj Nelson Tirkey",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pankajnelsontirkey/forkify-clone.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pankajnelsontirkey/forkify-clone/issues"
+  },
+  "homepage": "https://github.com/pankajnelsontirkey/forkify-clone#readme",
+  "description": ""
+}
