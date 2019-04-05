@@ -1,19 +1,37 @@
 {
-  "name": "forkify-clone",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Pankaj Nelson Tirkey",
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pankajnelsontirkey/forkify-clone.git"
-  },
-  "bugs": {
-    "url": "https://github.com/pankajnelsontirkey/forkify-clone/issues"
-  },
-  "homepage": "https://github.com/pankajnelsontirkey/forkify-clone#readme",
-  "description": ""
+   "name": "forkify-clone",
+   "version": "1.0.0",
+   "main": "index.js",
+   "scripts": {
+      "dev": "webpack --mode development",
+      "build": "webpack --mode production",
+      "start": "webpack-dev-server --mode development --open "
+   },
+   "author": "Pankaj Nelson Tirkey",
+   "license": "ISC",
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/pankajnelsontirkey/forkify-clone.git"
+   },
+   "bugs": {
+      "url": "https://github.com/pankajnelsontirkey/forkify-clone/issues"
+   },
+   "homepage": "https://github.com/pankajnelsontirkey/forkify-clone#readme",
+   "description": "",
+   "devDependencies": {
+      "@babel/core": "^7.3.4",
+      "@babel/preset-env": "^7.3.4",
+      "babel-loader": "^8.0.5",
+      "html-webpack-plugin": "^3.2.0",
+      "webpack": "^4.29.6",
+      "webpack-cli": "^3.2.3",
+      "webpack-dev-server": "^3.2.1"
+   },
+   "dependencies": {
+      "@babel/polyfill": "^7.2.5",
+      "axios": "^0.18.0",
+      "fractional": "^1.0.0",
+      "jquery": "^3.3.1",
+      "uniqid": "^5.0.3"
+   }
 }
