@@ -17,7 +17,7 @@ import { elements, renderLoader, clearLoader } from './views/base';
  */
 const state = {};
 
-/* Search Controller */
+/* SEARCH CONTROLLER BEGIN */
 const controlSearch = async () => {
    const query = searchView.getInput();
    if (query) {
@@ -38,7 +38,9 @@ const controlSearch = async () => {
       }
    }
 };
+/* SEARCH CONTROLLER END */
 
+/* SEARCH EVENT LISTENERS BEGIN */
 elements.searchForm.addEventListener('submit', e => {
    e.preventDefault();
    controlSearch();
@@ -53,8 +55,9 @@ elements.searchResultPages.addEventListener('click', e => {
       searchView.renderResults(state.search.result, goToPage);
    }
 });
+/* SEARCH EVENT LISTENERS END */
 
-/* Recipe Controller */
+/* RECIPE CONTROLLER BEGIN */
 const controlRecipe = async () => {
    const id = window.location.hash.replace('#', '');
 
@@ -84,13 +87,15 @@ const controlRecipe = async () => {
       }
    }
 };
+/* RECIPE CONTROLLER END */
 
+/* RECIPE EVENT LISTENERS BEGIN */
 ['hashchange', 'load'].forEach(event =>
    window.addEventListener(event, controlRecipe)
 );
+/* RECIPE EVENT LISTENERS END */
 
-/* List Controller */
-
+/* LIST CONTROLLER BEGIN */
 const controlList = () => {
    if (!state.list) {
       state.list = new List();
@@ -101,7 +106,9 @@ const controlList = () => {
       listView.renderItem(item);
    });
 };
+/* LIST CONTROLLER END */
 
+/* SHOPPING LIST EVENT LISTENERS BEGIN */
 elements.shopping.addEventListener('click', e => {
    const id = e.target.closest('.shopping__item').dataset.itemid;
 
@@ -113,8 +120,9 @@ elements.shopping.addEventListener('click', e => {
       state.list.updateCount(id, val);
    }
 });
+/* SHOPPING LIST EVENT LISTENERS END */
 
-/* Likes Controller */
+/* LIKES CONTROLLER BEGIN */
 const controlLike = () => {
    if (!state.likes) {
       state.likes = new Likes();
@@ -141,7 +149,9 @@ const controlLike = () => {
       likesView.renderLike(like);
    });
 };
+/* LIKES CONTROLLER END */
 
+/* LIKES EVENT LISTENERS BEGIN */
 window.addEventListener('load', () => {
    state.likes = new Likes();
    state.likes.readStorage();
@@ -163,3 +173,4 @@ elements.recipe.addEventListener('click', e => {
       controlLike();
    }
 });
+/* LIEKS EVENT LISTENERS END */
